@@ -1,9 +1,11 @@
 package projekcik.TicTacToe.Player;
 
+import java.awt.*;
+
 public class Player {
     String username;
     String shape;
-    int coords;
+    Point coords = new Point();
 
     public Player() {
 
@@ -25,11 +27,10 @@ public class Player {
         this.shape = shape;
     }
 
-    public int getCoords() {
+    public Point getCoords() {
         return coords;
     }
 
-    public void setCoords(int coords) {
-        this.coords = coords;
+    public void setCoords(int x, int y) { coords.move(x,y);
     }
 }
